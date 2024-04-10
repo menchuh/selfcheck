@@ -1,0 +1,13 @@
+# Mac OS
+.DS_Store
+
+# libraries
+lambda/receive_queue/bin
+lambda/receive_queue/certifi*
+lambda/receive_queue/charset*
+lambda/receive_queue/idna*
+lambda/receive_queue/requests*
+lambda/receive_queue/urllib3*
+
+# extends
+*.zip

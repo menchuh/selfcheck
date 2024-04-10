@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <main class="flex min-h-screen flex-col p-6">
+      <div class="flex p-4 text-2xl text-teal-600 underline">
+        セルフチェックシート
+      </div>
+      <div class="flex p-4">前日の様子を教えてください</div>
+      <form id="selfcheck" name="selfcheck" method="post">
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor1">いつもの自分</div>
+        <div id="normal_questions"></div>
+        <div class="border mt-10 w-full border-gray-400"></div>
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor2">
+          調子を崩すかもしれないサイン
+        </div>
+        <div id="crisis_questions"></div>
+        <div class="border mt-10 w-full border-gray-400"></div>
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor3">服薬（夜）</div>
+        <div id="medication_night"></div>
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor4">
+          服薬（睡眠前）
+        </div>
+        <div id="medication_before_sleep"></div>
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor5">服薬（朝）</div>
+        <div id="medication_morning"></div>
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor6">睡眠時間</div>
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor7">総合評価</div>
+        <div id="evaluation">
+          <div class="flex m-6 pl-10">
+            <select
+              id="evaluation_points"
+              name="evaluation_points"
+              class="bg-gray-50 border border-gray-300 rounded-lg hover:bg-teal-100 focus:ring-teal-200 p-2">
+              <option selected>総合評価を入力してください</option>
+            </select>
+          </div>
+        </div>
+        <div class="pl-6 pt-4 text-xl font-bold" id="anchor8">気づき</div>
+        <div id="notice">
+          <div class="flex m-6 pl-10">
+            <textarea
+              name="notice"
+              class="block p-2.5 h-24 w-10/12 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-teal-400 focus:border-teal-400"
+              placeholder="気づき感想の記入"></textarea>
+          </div>
+        </div>
+        <div id="submit" class="mt-16 mb-16 ml-6 pl-8">
+          <input type="submit" id="btn_submit" class="hidden" />
+          <label
+            for="btn_submit"
+            id="btn_submit_label"
+            class="cursor-pointer border border-gray-800 pt-2 pb-2 pl-6 pr-6 rounded-lg hover:bg-teal-100"
+            >送信</label
+          >
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
